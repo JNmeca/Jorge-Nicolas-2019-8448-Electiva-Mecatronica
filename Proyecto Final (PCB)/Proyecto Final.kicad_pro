@@ -48,7 +48,13 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -112,8 +118,15 @@
         "solder_mask_min_width": 0.0,
         "use_height_for_length_calcs": true
       },
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -361,12 +374,12 @@
     },
     "net_colors": {
       "+12V": "rgb(255, 0, 7)",
-      "+5V": "rgb(0, 255, 0)",
+      "+5V": "rgb(0, 194, 200)",
       "C_Relay1": "rgb(255, 244, 0)",
       "C_Relay2": "rgb(255, 244, 0)",
       "C_Relay3": "rgb(255, 244, 0)",
       "C_Relay4": "rgb(255, 244, 0)",
-      "GND": "rgb(0, 4, 255)"
+      "GND": "rgb(127, 200, 127)"
     }
   },
   "pcbnew": {
@@ -422,6 +435,34 @@
     [
       "9c6f424b-b5be-48b8-a23a-c2fcaf2c6dc9",
       ""
+    ],
+    [
+      "4c12c268-cb1b-4486-9dc5-fceb29f21f0d",
+      "Motor Driver"
+    ],
+    [
+      "b29395cc-df8a-4f64-b34d-9bd29e97e257",
+      "Sensors"
+    ],
+    [
+      "131cbf2c-2a69-4e15-94e9-db050004585b",
+      "Expansions"
+    ],
+    [
+      "ba7b27e8-0e7e-4813-a1f3-426618b08ae4",
+      "MOSFET Driver"
+    ],
+    [
+      "e4792b64-7560-4b9f-b5d4-547e09f4fd30",
+      "Relay Modules"
+    ],
+    [
+      "80f4ff23-9dab-4fd2-b361-296b925ef63c",
+      "Fuente SW"
+    ],
+    [
+      "bfe2fba5-e0c3-45b7-96a5-65e09a932495",
+      "Lcd"
     ]
   ],
   "text_variables": {}

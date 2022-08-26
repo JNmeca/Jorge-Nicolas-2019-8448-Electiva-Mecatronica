@@ -1,0 +1,39 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="2">
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code/PE_Error.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408851" FileType="45637" />
+      <File Name="Generated_Code/Relay4.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150797" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150866" FileType="45637" CompNumb="4" />
+      <File Name="Documentation/Liffy_SIGNALS.txt" FileDate="2022-08-24, 00:25:50" FileAge="1661315150894" FileType="3072" />
+      <File Name="Documentation/Liffy_Settings.xml" FileDate="2022-08-24, 00:25:50" FileAge="1661315150985" FileType="3072" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408843" FileType="45637" />
+      <File Name="Documentation/Liffy.txt" FileDate="2022-08-24, 00:25:51" FileAge="1661315151362" FileType="3072" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408856" FileType="45637" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.prm" FileDate="2022-08-24, 00:13:28" FileAge="1661314408823" FileType="8" CompNumb="4" />
+      <File Name="Generated_Code/IO_Map.c" FileDate="2022-08-24, 00:13:28" FileAge="1661314408838" FileType="45637" />
+      <File Name="Generated_Code/Relay1.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150844" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Relay3.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150811" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/Relay1.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150831" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Relay3.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150807" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408847" FileType="45637" />
+      <File Name="Sources/main.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150850" FileType="128" />
+      <File Name="Sources/Events.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150882" FileType="131328" />
+      <File Name="Sources/Events.c" FileDate="2022-08-24, 00:13:28" FileAge="1661314408810" FileType="131328" />
+      <File Name="Generated_Code/Relay2.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150819" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408831" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Relay4.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150801" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/Relay2.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150815" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150859" FileType="45637" CompNumb="4" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>2</CodeGenReference>
+</CodeGenerationInfo>

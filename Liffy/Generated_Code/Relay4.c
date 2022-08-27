@@ -6,7 +6,7 @@
 **     Component   : BitIO
 **     Version     : Component 02.086, Driver 03.27, CPU db: 3.00.026
 **     Compiler    : CodeWarrior HCS08 C Compiler
-**     Date/Time   : 2022-08-24, 00:25, # CodeGen: 1
+**     Date/Time   : 2022-08-26, 19:35, # CodeGen: 2
 **     Abstract    :
 **         This component "BitIO" implements an one-bit input/output.
 **         It uses one bit/pin of a port.
@@ -39,6 +39,7 @@
 **         PutVal - void Relay4_PutVal(bool Val);
 **         ClrVal - void Relay4_ClrVal(void);
 **         SetVal - void Relay4_SetVal(void);
+**         NegVal - void Relay4_NegVal(void);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -168,6 +169,21 @@ void Relay4_ClrVal(void)
 */
 /*
 void Relay4_SetVal(void)
+
+**  This method is implemented as a macro. See Relay4.h file.  **
+*/
+
+/*
+** ===================================================================
+**     Method      :  Relay4_NegVal (component BitIO)
+**     Description :
+**         This method negates (inverts) the output value.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+/*
+void Relay4_NegVal(void)
 
 **  This method is implemented as a macro. See Relay4.h file.  **
 */

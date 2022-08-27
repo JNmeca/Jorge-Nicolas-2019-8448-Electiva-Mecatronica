@@ -7,7 +7,7 @@
 **     Version     : Component 01.001, Driver 01.40, CPU db: 3.00.026
 **     Datasheet   : MC9S08MP16 Rev. 1 09/2009
 **     Compiler    : CodeWarrior HCS08 C Compiler
-**     Date/Time   : 2022-08-24, 00:25, # CodeGen: 1
+**     Date/Time   : 2022-08-26, 19:56, # CodeGen: 5
 **     Abstract    :
 **         This component "MC9S08MP16_48" contains initialization 
 **         of the CPU and provides basic methods and events for 
@@ -70,6 +70,18 @@
 #include "Relay2.h"
 #include "Relay3.h"
 #include "Relay4.h"
+#include "Motor1.h"
+#include "Motor2.h"
+#include "Motor3.h"
+#include "Motor4.h"
+#include "DIP1.h"
+#include "DIP2.h"
+#include "Nivel.h"
+#include "Luz1.h"
+#include "Luz2.h"
+#include "DHT11.h"
+#include "Measure_An.h"
+#include "Interrupt.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -81,6 +93,9 @@
 /* Global variables */
 volatile byte CCR_reg;                 /* Current CCR register */
 volatile byte CCR_lock;                /* Nesting level of critical regions */
+
+/*Definition of global shadow variables*/
+byte Shadow_PTB;
 
 
 /*
@@ -202,12 +217,26 @@ void PE_low_level_init(void)
   /* SCGC2: DBG=1,FLS=1,KBI=1,ADC=1,SCI=1,SPI=1,IIC=1,PGA=1 */
   setReg8(SCGC2, 0xFFU);                
   /* Common initialization of the CPU registers */
-  /* PTCD: PTCD5=0,PTCD4=0,PTCD3=0,PTCD2=0 */
-  clrReg8Bits(PTCD, 0x3CU);             
-  /* PTCPE: PTCPE5=0,PTCPE4=0,PTCPE3=0,PTCPE2=0 */
-  clrReg8Bits(PTCPE, 0x3CU);            
-  /* PTCDD: PTCDD5=1,PTCDD4=1,PTCDD3=1,PTCDD2=1 */
-  setReg8Bits(PTCDD, 0x3CU);            
+  /* PTCD: PTCD6=0,PTCD5=0,PTCD4=0,PTCD3=0,PTCD2=0,PTCD1=0,PTCD0=0 */
+  clrReg8Bits(PTCD, 0x7FU);             
+  /* PTCPE: PTCPE6=0,PTCPE5=0,PTCPE4=0,PTCPE3=0,PTCPE2=0,PTCPE1=0,PTCPE0=0 */
+  clrReg8Bits(PTCPE, 0x7FU);            
+  /* PTCDD: PTCDD6=1,PTCDD5=1,PTCDD4=1,PTCDD3=1,PTCDD2=1,PTCDD1=1,PTCDD0=1 */
+  setReg8Bits(PTCDD, 0x7FU);            
+  /* PTBD: PTBD5=1,PTBD4=0 */
+  clrSetReg8Bits(PTBD, 0x10U, 0x20U);   
+  /* PTBPE: PTBPE6=0,PTBPE5=1,PTBPE4=0 */
+  clrSetReg8Bits(PTBPE, 0x50U, 0x20U);  
+  /* PTBDD: PTBDD6=0,PTBDD5=1,PTBDD4=1 */
+  clrSetReg8Bits(PTBDD, 0x40U, 0x30U);  
+  /* PTAD: PTAD7=0,PTAD6=0 */
+  clrReg8Bits(PTAD, 0xC0U);             
+  /* PTAPE: PTAPE7=0,PTAPE6=0,PTAPE5=0,PTAPE4=0 */
+  clrReg8Bits(PTAPE, 0xF0U);            
+  /* PTADD: PTADD7=1,PTADD6=1,PTADD5=0,PTADD4=0 */
+  clrSetReg8Bits(PTADD, 0x30U, 0xC0U);  
+  /* APCTL1: ADPC2=1,ADPC1=1,ADPC0=1 */
+  setReg8Bits(APCTL1, 0x07U);           
   /* PTASE: PTASE7=0,PTASE6=0,PTASE5=0,PTASE4=0,PTASE3=0,PTASE2=0,PTASE1=0,PTASE0=0 */
   setReg8(PTASE, 0x00U);                
   /* PTBSE: PTBSE7=0,PTBSE6=0,PTBSE5=0,PTBSE4=0,PTBSE3=0,PTBSE2=0,PTBSE1=0,PTBSE0=0 */
@@ -238,10 +267,10 @@ void PE_low_level_init(void)
   setReg8(ILRS6, 0x00U);                
   /* ILRS5: ILR23=0,ILR22=0,ILR21=0,ILR20=0 */
   setReg8(ILRS5, 0x00U);                
-  /* ILRS4: ILR19=0,ILR18=0,ILR17=0,ILR16=0 */
-  setReg8(ILRS4, 0x00U);                
-  /* ILRS3: ILR15=0,ILR14=0,ILR13=0,ILR12=0 */
-  setReg8(ILRS3, 0x00U);                
+  /* ILRS4: ILR19=0,ILR18=2,ILR17=0,ILR16=0 */
+  setReg8(ILRS4, 0x20U);                
+  /* ILRS3: ILR15=2,ILR14=0,ILR13=0,ILR12=0 */
+  setReg8(ILRS3, 0x80U);                
   /* ILRS2: ILR11=0,ILR10=0,ILR9=0,ILR8=0 */
   setReg8(ILRS2, 0x00U);                
   /* ILRS1: ILR7=0,ILR6=0,ILR5=0,ILR4=0 */
@@ -255,6 +284,21 @@ void PE_low_level_init(void)
   /* ### BitIO "Relay2" init code ... */
   /* ### BitIO "Relay3" init code ... */
   /* ### BitIO "Relay4" init code ... */
+  /* ### BitIO "Motor1" init code ... */
+  /* ### BitIO "Motor2" init code ... */
+  /* ### BitIO "Motor3" init code ... */
+  /* ### BitIO "Motor4" init code ... */
+  /* ### BitIO "DIP1" init code ... */
+  /* ### BitIO "DIP2" init code ... */
+  /* ### BitIO "Nivel" init code ... */
+  /* ### BitIO "Luz1" init code ... */
+  /* ### BitIO "Luz2" init code ... */
+  /* ### BitIO "DHT11" init code ... */
+  Shadow_PTB |= (byte)0x20U;           /* Initialize pin shadow variable bit */
+  /* ###  "Measure_An" init code ... */
+  Measure_An_Init();
+  /* ### TimerInt "Interrupt" init code ... */
+  Interrupt_Init();
   CCR_lock = (byte)0;
   __EI();                              /* Enable interrupts */
 }

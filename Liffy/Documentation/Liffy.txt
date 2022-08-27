@@ -16,6 +16,8 @@ Module "Relay1"    (component BitIO)
                 only if the direction = _[output]_ or _[input/output]_.
    - Relay1_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
                 the direction = _[output]_ or _[input/output]_.
+   - Relay1_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
 
 Module "Relay2"    (component BitIO)
    - Relay2_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
@@ -29,6 +31,8 @@ Module "Relay2"    (component BitIO)
                 only if the direction = _[output]_ or _[input/output]_.
    - Relay2_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
                 the direction = _[output]_ or _[input/output]_.
+   - Relay2_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
 
 Module "Relay3"    (component BitIO)
    - Relay3_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
@@ -42,6 +46,8 @@ Module "Relay3"    (component BitIO)
                 only if the direction = _[output]_ or _[input/output]_.
    - Relay3_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
                 the direction = _[output]_ or _[input/output]_.
+   - Relay3_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
 
 Module "Relay4"    (component BitIO)
    - Relay4_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
@@ -55,6 +61,137 @@ Module "Relay4"    (component BitIO)
                 only if the direction = _[output]_ or _[input/output]_.
    - Relay4_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
                 the direction = _[output]_ or _[input/output]_.
+   - Relay4_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "Motor1"    (component BitIO)
+   - Motor1_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Motor1_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory 
+                or a register and this value will be written to the pin after switching to the output mode (using 
+                [SetDir(TRUE)]; see <Safe mode> property for limitations). If the direction is [output], it writes the value to 
+                the pin. (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Motor1_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+   - Motor1_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
+                the direction = _[output]_ or _[input/output]_.
+   - Motor1_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "Motor2"    (component BitIO)
+   - Motor2_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Motor2_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory 
+                or a register and this value will be written to the pin after switching to the output mode (using 
+                [SetDir(TRUE)]; see <Safe mode> property for limitations). If the direction is [output], it writes the value to 
+                the pin. (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Motor2_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+   - Motor2_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
+                the direction = _[output]_ or _[input/output]_.
+   - Motor2_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "Motor3"    (component BitIO)
+   - Motor3_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Motor3_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory 
+                or a register and this value will be written to the pin after switching to the output mode (using 
+                [SetDir(TRUE)]; see <Safe mode> property for limitations). If the direction is [output], it writes the value to 
+                the pin. (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Motor3_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+   - Motor3_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
+                the direction = _[output]_ or _[input/output]_.
+   - Motor3_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "Motor4"    (component BitIO)
+   - Motor4_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Motor4_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory 
+                or a register and this value will be written to the pin after switching to the output mode (using 
+                [SetDir(TRUE)]; see <Safe mode> property for limitations). If the direction is [output], it writes the value to 
+                the pin. (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Motor4_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+   - Motor4_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if 
+                the direction = _[output]_ or _[input/output]_.
+   - Motor4_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "DIP1"      (component BitIO)
+   - DIP1_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+
+Module "DIP2"      (component BitIO)
+   - DIP2_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+
+Module "Nivel"     (component BitIO)
+   - Nivel_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+
+Module "Luz1"      (component BitIO)
+   - Luz1_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Luz1_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory or 
+                a register and this value will be written to the pin after switching to the output mode (using [SetDir(TRUE)]; 
+                see <Safe mode> property for limitations). If the direction is [output], it writes the value to the pin. 
+                (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Luz1_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available only 
+                if the direction = _[output]_ or _[input/output]_.
+   - Luz1_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
+                direction = _[output]_ or _[input/output]_.
+   - Luz1_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "Luz2"      (component BitIO)
+   - Luz2_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - Luz2_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory or 
+                a register and this value will be written to the pin after switching to the output mode (using [SetDir(TRUE)]; 
+                see <Safe mode> property for limitations). If the direction is [output], it writes the value to the pin. 
+                (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - Luz2_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available only 
+                if the direction = _[output]_ or _[input/output]_.
+   - Luz2_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
+                direction = _[output]_ or _[input/output]_.
+   - Luz2_NegVal -Negates (inverts) the output value. It is equivalent to the [PutVal(!GetVal())]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+
+Module "DHT11"     (component BitIO)
+   - DHT11_SetDir -Sets a pin direction (available only if the direction = _[input/output]_).
+   - DHT11_GetVal -Returns the input/output value. If the direction is [input] then the input value of the pin is read and 
+                returned. If the direction is [output] then the last written value is returned (see <Safe mode> property for 
+                limitations). This method cannot be disabled if direction is [input].
+   - DHT11_PutVal -The specified output value is set. If the direction is [input], the component saves the value to a memory or 
+                a register and this value will be written to the pin after switching to the output mode (using [SetDir(TRUE)]; 
+                see <Safe mode> property for limitations). If the direction is [output], it writes the value to the pin. 
+                (Method is available only if the direction = _[output]_ or _[input/output]_).
+   - DHT11_ClrVal -Clears (set to zero) the output value. It is equivalent to the [PutVal(FALSE)]. This method is available 
+                only if the direction = _[output]_ or _[input/output]_.
+   - DHT11_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
+                direction = _[output]_ or _[input/output]_.
+
+Module "Measure_An" (component ADC)
+   - Measure_An_Measure -This method performs one measurement on all channels that are set in the component inspector. (Note: 
+                If the <number of conversions> is more than one the conversion of A/D channels is performed specified number of 
+                times.)
+   - Measure_An_GetValue16 -This method returns the last measured values of all channels. Compared with <GetValue> method this 
+                method returns more accurate result if the <number of conversions> is greater than 1 and <AD resolution> is 
+                less than 16 bits. In addition, the user code dependency on <AD resolution> is eliminated.
+
+Module "Interrupt" (component TimerInt)
 
 Module "Cpu"       (component MC9S08MP16_48)
    - Cpu_EnableInt -Enables maskable interrupts

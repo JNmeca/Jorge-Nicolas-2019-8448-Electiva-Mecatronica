@@ -38,7 +38,51 @@
 #include "Relay2.h"
 #include "Relay3.h"
 #include "Relay4.h"
+#include "Motor1.h"
+#include "Motor2.h"
+#include "Motor3.h"
+#include "Motor4.h"
+#include "DIP1.h"
+#include "DIP2.h"
+#include "Nivel.h"
+#include "Luz1.h"
+#include "Luz2.h"
+#include "DHT11.h"
+#include "Measure_An.h"
+#include "Interrupt.h"
 
+
+void Interrupt_OnInterrupt(void);
+/*
+** ===================================================================
+**     Event       :  Interrupt_OnInterrupt (module Events)
+**
+**     Component   :  Interrupt [TimerInt]
+**     Description :
+**         When a timer interrupt occurs this event is called (only
+**         when the component is enabled - <Enable> and the events are
+**         enabled - <EnableEvent>). This event is enabled only if a
+**         <interrupt service/event> is enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void Measure_An_OnEnd(void);
+/*
+** ===================================================================
+**     Event       :  Measure_An_OnEnd (module Events)
+**
+**     Component   :  Measure_An [ADC]
+**     Description :
+**         This event is called after the measurement (which consists
+**         of <1 or more conversions>) is/are finished.
+**         The event is available only when the <Interrupt
+**         service/event> property is enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
 
 /* END Events */
 #endif /* __Events_H*/

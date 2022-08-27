@@ -10,30 +10,54 @@
   </ToolchainSettings>
   <GeneratedFilesList>
     <GeneratedByPE>
-      <File Name="Generated_Code/PE_Error.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408851" FileType="45637" />
-      <File Name="Generated_Code/Relay4.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150797" FileType="45637" CompNumb="11" />
-      <File Name="Generated_Code/Vectors.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150866" FileType="45637" CompNumb="4" />
-      <File Name="Documentation/Liffy_SIGNALS.txt" FileDate="2022-08-24, 00:25:50" FileAge="1661315150894" FileType="3072" />
-      <File Name="Documentation/Liffy_Settings.xml" FileDate="2022-08-24, 00:25:50" FileAge="1661315150985" FileType="3072" />
-      <File Name="Generated_Code/IO_Map.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408843" FileType="45637" />
-      <File Name="Documentation/Liffy.txt" FileDate="2022-08-24, 00:25:51" FileAge="1661315151362" FileType="3072" />
-      <File Name="Generated_Code/PE_Types.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408856" FileType="45637" />
-      <File Name="Project_Settings/Linker_Files/ProcessorExpert.prm" FileDate="2022-08-24, 00:13:28" FileAge="1661314408823" FileType="8" CompNumb="4" />
-      <File Name="Generated_Code/IO_Map.c" FileDate="2022-08-24, 00:13:28" FileAge="1661314408838" FileType="45637" />
-      <File Name="Generated_Code/Relay1.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150844" FileType="45637" CompNumb="8" />
-      <File Name="Generated_Code/Relay3.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150811" FileType="45637" CompNumb="10" />
-      <File Name="Generated_Code/Relay1.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150831" FileType="45637" CompNumb="8" />
-      <File Name="Generated_Code/Relay3.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150807" FileType="45637" CompNumb="10" />
+      <File Name="Documentation/Liffy_SIGNALS.txt" FileDate="2022-08-26, 20:00:30" FileAge="1661558430047" FileType="3072" />
+      <File Name="Generated_Code/Relay4.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960179" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/Relay4.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960185" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/Motor4.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960023" FileType="45637" CompNumb="15" />
+      <File Name="Generated_Code/Luz2.h" FileDate="2022-08-26, 20:00:30" FileAge="1661558430009" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/Relay3.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960166" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/Motor4.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960016" FileType="45637" CompNumb="15" />
+      <File Name="Generated_Code/DIP2.h" FileDate="2022-08-26, 19:52:02" FileAge="1661557922056" FileType="45637" CompNumb="23" />
+      <File Name="Generated_Code/Luz2.c" FileDate="2022-08-26, 20:00:30" FileAge="1661558430016" FileType="45637" CompNumb="26" />
+      <File Name="Generated_Code/Relay3.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960172" FileType="45637" CompNumb="10" />
+      <File Name="Sources/Events.h" FileDate="2022-08-26, 19:56:59" FileAge="1661558219833" FileType="131328" />
+      <File Name="Generated_Code/Motor3.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960038" FileType="45637" CompNumb="14" />
+      <File Name="Generated_Code/DIP2.c" FileDate="2022-08-26, 19:52:02" FileAge="1661557922052" FileType="45637" CompNumb="23" />
+      <File Name="Generated_Code/Luz1.h" FileDate="2022-08-26, 20:00:29" FileAge="1661558429995" FileType="45637" CompNumb="25" />
+      <File Name="Generated_Code/Relay2.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960145" FileType="45637" CompNumb="9" />
+      <File Name="Sources/Events.c" FileDate="2022-08-26, 19:56:59" FileAge="1661558219842" FileType="131328" />
+      <File Name="Generated_Code/Motor3.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960031" FileType="45637" CompNumb="14" />
+      <File Name="Generated_Code/DHT11.h" FileDate="2022-08-26, 19:52:02" FileAge="1661557922020" FileType="45637" CompNumb="27" />
+      <File Name="Generated_Code/DIP1.h" FileDate="2022-08-26, 19:52:02" FileAge="1661557922058" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/Relay2.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960156" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/Luz1.c" FileDate="2022-08-26, 20:00:30" FileAge="1661558430002" FileType="45637" CompNumb="25" />
+      <File Name="Generated_Code/DHT11.c" FileDate="2022-08-26, 19:52:02" FileAge="1661557922016" FileType="45637" CompNumb="27" />
+      <File Name="Generated_Code/Motor2.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960048" FileType="45637" CompNumb="13" />
       <File Name="Generated_Code/PE_Const.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408847" FileType="45637" />
-      <File Name="Sources/main.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150850" FileType="128" />
-      <File Name="Sources/Events.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150882" FileType="131328" />
-      <File Name="Sources/Events.c" FileDate="2022-08-24, 00:13:28" FileAge="1661314408810" FileType="131328" />
-      <File Name="Generated_Code/Relay2.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150819" FileType="45637" CompNumb="9" />
-      <File Name="Generated_Code/Cpu.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408831" FileType="45637" CompNumb="4" />
-      <File Name="Generated_Code/Relay4.h" FileDate="2022-08-24, 00:25:50" FileAge="1661315150801" FileType="45637" CompNumb="11" />
-      <File Name="Generated_Code/Relay2.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150815" FileType="45637" CompNumb="9" />
-      <File Name="Generated_Code/Cpu.c" FileDate="2022-08-24, 00:25:50" FileAge="1661315150859" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/DIP1.c" FileDate="2022-08-26, 19:52:02" FileAge="1661557922058" FileType="45637" CompNumb="22" />
+      <File Name="Generated_Code/Relay1.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960118" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Motor2.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960045" FileType="45637" CompNumb="13" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408856" FileType="45637" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408851" FileType="45637" />
+      <File Name="Generated_Code/Relay1.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960128" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Motor1.h" FileDate="2022-08-26, 19:36:00" FileAge="1661556960059" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2022-08-26, 19:52:02" FileAge="1661557922105" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Motor1.c" FileDate="2022-08-26, 19:36:00" FileAge="1661556960048" FileType="45637" CompNumb="12" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.prm" FileDate="2022-08-24, 00:13:28" FileAge="1661314408823" FileType="8" CompNumb="4" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2022-08-26, 19:56:59" FileAge="1661558219792" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Measure_An.h" FileDate="2022-08-26, 19:56:59" FileAge="1661558219739" FileType="45637" CompNumb="29" />
+      <File Name="Documentation/Liffy.txt" FileDate="2022-08-26, 20:00:30" FileAge="1661558430248" FileType="3072" />
+      <File Name="Documentation/Liffy_Settings.xml" FileDate="2022-08-26, 20:00:30" FileAge="1661558430205" FileType="3072" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2022-08-24, 00:13:28" FileAge="1661314408843" FileType="45637" />
+      <File Name="Generated_Code/Measure_An.c" FileDate="2022-08-26, 19:56:59" FileAge="1661558219736" FileType="45637" CompNumb="29" />
+      <File Name="Generated_Code/IO_Map.c" FileDate="2022-08-24, 00:13:28" FileAge="1661314408838" FileType="45637" />
+      <File Name="Sources/main.c" FileDate="2022-08-26, 19:59:47" FileAge="1661558387380" FileType="128" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2022-08-26, 19:56:59" FileAge="1661558219798" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/Nivel.h" FileDate="2022-08-26, 19:52:02" FileAge="1661557922048" FileType="45637" CompNumb="24" />
+      <File Name="Generated_Code/Interrupt.h" FileDate="2022-08-26, 19:56:59" FileAge="1661558219733" FileType="45637" CompNumb="30" />
+      <File Name="Generated_Code/Nivel.c" FileDate="2022-08-26, 19:52:02" FileAge="1661557922044" FileType="45637" CompNumb="24" />
+      <File Name="Generated_Code/Interrupt.c" FileDate="2022-08-26, 19:56:59" FileAge="1661558219729" FileType="45637" CompNumb="30" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>2</CodeGenReference>
+  <CodeGenReference>7</CodeGenReference>
 </CodeGenerationInfo>

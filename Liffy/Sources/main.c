@@ -34,6 +34,18 @@
 #include "Relay2.h"
 #include "Relay3.h"
 #include "Relay4.h"
+#include "Motor1.h"
+#include "Motor2.h"
+#include "Motor3.h"
+#include "Motor4.h"
+#include "DIP1.h"
+#include "DIP2.h"
+#include "Nivel.h"
+#include "Luz1.h"
+#include "Luz2.h"
+#include "DHT11.h"
+#include "Measure_An.h"
+#include "Interrupt.h"
 /* Include shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -49,7 +61,7 @@
 #define STATE_MAINTENANCE		4	//Estado Mantenimiento 
 #define STATE_ERROR				5	//Estado Error
 
-//Set
+//Set RELAY
 #define ON_Relay 				1
 #define OFF_Relay				0
 
@@ -128,18 +140,33 @@ void main(void)
 
 unsigned char F_STATE_INIT(void)		//Estado Inicial
 {
-	Relay1_PutVal(0);
+	for (int var = 0; var < 2; var++) 
+	{
+		Relay1_NegVal();
+		//500 ms
+		Relay2_NegVal();
+		//500 ms
+		Relay3_NegVal();
+		//500 ms
+		Relay4_NegVal();
+		//500 ms
+		Luz1_NegVal();
+		//500 ms
+		Luz2_NegVal();
+		//500 ms
+	}
 	
+	return STATE_REVISION;
 }
 
 unsigned char F_STATE_REVISION(void)	//Estado Revisión
 {
-	
+	return STATE_MEASURE;
 }
 
 unsigned char F_STATE_MEASURE(void)		//Estado Medición
 {
-	
+	return STATE_HEALTH;
 }
 unsigned char F_STATE_HEALTH(void)		//Estado Salud Planta
 {

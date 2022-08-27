@@ -7,7 +7,7 @@
 **     Version     : Component 01.001, Driver 01.40, CPU db: 3.00.026
 **     Datasheet   : MC9S08MP16 Rev. 1 09/2009
 **     Compiler    : CodeWarrior HCS08 C Compiler
-**     Date/Time   : 2022-08-24, 00:13, # CodeGen: 0
+**     Date/Time   : 2022-08-26, 19:51, # CodeGen: 4
 **     Abstract    :
 **         This component "MC9S08MP16_48" contains initialization 
 **         of the CPU and provides basic methods and events for 
@@ -102,6 +102,9 @@
 /* Global variables */
 extern volatile byte CCR_reg;          /* Current CCR register */
 extern volatile byte CCR_lock;         /* Nesting level of critical regions */
+
+/* Shadow variables */
+extern byte Shadow_PTB;                /* Shadow variable for I/O components */
 
 void _EntryPoint(void);
 /*
